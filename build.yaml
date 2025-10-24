@@ -1,0 +1,13 @@
+# build.yaml
+
+targets:
+  $default:
+    builders:
+      # Target the freezed builder
+      freezed|freezed:
+        generate_for:
+          include:
+            # 1. Target all Dart files in the 'lib/models' folder
+            - lib/models/**.dart
+            # 2. Target all Dart files in the 'lib/state' folder
+            - lib/state/**.
